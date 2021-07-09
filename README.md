@@ -86,6 +86,8 @@ Inside `api/actions/actions-router.js` build endpoints for performing CRUD opera
   - Returns the updated action as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
   - If the request body is missing any of the required fields it responds with a status code 400.
+
+  
 - [ ] `[DELETE] /api/actions/:id`
   - Returns no response body.
   - If there is no action with the given `id` it responds with a status code 404.
@@ -156,8 +158,20 @@ We have provided test data for all the resources.
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
+
 1. The core features of Node.js and Express and why they are useful.
+The core features of Node.js are that is uses the same programming language (JavaScipt) and paradigm for both client and server. JavaSciprt is single-threaded and asynchronous. Using JS gives us access to the npm repository. 
+
+The core features of Express are is that it's a light and unopionionated framwork that sits on top of Node.js. We can build web applications, server single page applications, build RESTful web services that work with JSON, server static content, and power real-time applications using technologies like Web Sockets or WebRTC. Features middleware, routing, routers for application modularity, covenience helps, and views. 
+
 1. Understand and explain the use of Middleware.
+Middleware has three different types, built middle-ware, third-party middleware, and custom middleware. Route handlers are middleware. Middleware is functions that extend software, used to add features to express, the biggest feature of express, can be considered an array of functions that get exdcuted in the order that they are introduced into the server code. 
+
 1. The basic principles of the REST architectural style.
+The basic principles of the REST architectural style are everything is a resource, each resource is accessible via a unique URL, resources can have multiple representations, communication happen over a stateless protocol (HTTP), and resource management happens vie HTTP methods. 
+
 1. Understand and explain the use of Express Routers.
+Express Routers are like a mini Express application. It can have its own routing and middleware, but it needs to exist inside an express applications. Routers are a way of organizing express apllications, you write seperate peieces that can later be composed together. 
+
 1. Describe tooling used to manually test the correctness of an API.
+Tooling used to manually test the correctness of an API is used with Heroku. We can use Postman to connect to the API. 

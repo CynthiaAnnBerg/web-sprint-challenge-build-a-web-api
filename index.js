@@ -12,3 +12,21 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Pull your server into this file and start it!
 */
+
+const express = require('express');
+const server = express();
+const port = process.env.PORT || 4000
+
+server.use(express.json());
+
+const projectRouter = require('./api/projects/projects-router')
+const actionRouter = require('./api/actions/actions-router')
+
+server.use('/api','/projects',projectRouter)
+server.use('/api','/actions',actionRouter)
+
+server.listen(port, () => {
+    console.log(`Server running at http://localhost:{port}`)
+})
+
+module.exports = server;
